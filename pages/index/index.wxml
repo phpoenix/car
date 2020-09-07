@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view>
+    <swiper>
+      <block wx:for = "{{banner}}">
+        <swiper-item>
+          <image src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+</view>
