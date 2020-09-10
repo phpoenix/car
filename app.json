@@ -5,20 +5,36 @@
     "pages/logs/logs"
   ],
   "window":{
+    "backgroundColor":"#f2f2f2",
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "顺通大广汽车服务",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
+    "color": "#222",
+    "selectedColor": "#ff9a00",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
     "list": [
       {
+        "selectedIconPath": "images/b_home.png",
+        "iconPath": "images/home.png",
         "pagePath": "pages/index/index",
         "text": "首页"
       },
       {
+        "width":"200rpx",
+        "selectedIconPath": "images/b_service.png",
+        "iconPath": "images/service.png",
         "pagePath": "pages/service/index",
         "text": "汽车服务"
+      },
+      {
+        "selectedIconPath": "images/b_center.png",
+        "iconPath": "images/center.png",
+        "pagePath": "pages/service/index",
+        "text": "我的"
       }
     ]
   },

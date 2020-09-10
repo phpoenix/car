@@ -21,7 +21,8 @@ Page({
       url: 'http://cc.cc/index/index/index',
       success (e){
         that.setData({
-          banner : e.data.result
+          types : e.data.result.types,
+          banner : e.data.result.banner
         })
         console.log(that.data.banner);
       }
@@ -36,3 +37,5 @@ Page({
     })
   }
 })
+
+

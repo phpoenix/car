@@ -1,10 +1,158 @@
 <!--index.wxml-->
-<view>
-    <swiper>
-      <block wx:for = "{{banner}}">
-        <swiper-item>
-          <image src="{{item}}"></image>
-        </swiper-item>
-      </block>
-    </swiper>
+<view class="main">
+  <view class="top">
+      <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000" indicator-color="#CCC" indicator-active-color="#FFF">
+        <block wx:for = "{{banner}}">
+          <swiper-item>
+            <image class="index_image" src="{{item}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
+  <view class="category">
+    <view class="cate_one">
+      <text class="iconfont icon-jiqiren"></text>
+      <view>
+        <text class="note" decode="{{true}}" space="{{true}}">&nbsp;暂无车辆信息</text>
+      </view>
+    </view>
+    <view class="line_one"></view>
+    <view class="cate_two">
+      <view class="tag">
+        <view class="tag_items" wx:for = "{{types}}">
+          <image class="tag_image" src="{{item.logoimage}}"></image>
+          <text>{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="cate_three">
+        <view class="msg_text">
+          <text>超值单次洗车大礼包仅需<text style="font-weight:bold;color:red;">23.8</text>元，速来抢购</text>
+        </view>
+        <view class="msg_btn">
+          <button class="btn_wx">立即洗车</button>
+        </view>
+    </view>
+  </view>
+  <view class="hot">
+    <text decode="{{true}}" space="{{true}}">&nbsp;</text>
+    <view class="tip"></view>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;热门车辆</text>
+    <view class="hot_right">
+      <text decode="{{true}}" space="{{true}}">更多&nbsp;</text>
+      <text class="iconfont icon-forward"></text>
+    </view>
+  </view>
+  <view class="list">
+    <view class="item">
+      <view class="item_img">
+        <image class="tag_image" src="/../images/item.png"></image>
+      </view>
+      <view class="item_msg">
+        <view class="msg_left">
+          <text>顺通大广汽车</text>
+        </view>
+        <view class="msg_right">
+          <text class="pos">1km</text>
+          <image src="/../images/nav.png"></image>
+          <text class="nav">导航</text>
+        </view>
+      </view>
+      <view class="below">
+        <text>定阳路巨燕财富</text>
+      </view>
+    </view>
+    <view class="item">
+      <view class="item_img">
+        <image class="tag_image" src="/../images/item.png"></image>
+      </view>
+      <view class="item_msg">
+        <view class="msg_left">
+          <text>顺通大广汽车</text>
+        </view>
+        <view class="msg_right">
+          <text class="pos">1km</text>
+          <image src="/../images/nav.png"></image>
+          <text class="nav">导航</text>
+        </view>
+      </view>
+      <view class="below">
+        <text>定阳路巨燕财富</text>
+      </view>
+    </view>
+    <view class="item">
+      <view class="item_img">
+        <image class="tag_image" src="/../images/item.png"></image>
+      </view>
+      <view class="item_msg">
+        <view class="msg_left">
+          <text>顺通大广汽车</text>
+        </view>
+        <view class="msg_right">
+          <text class="pos">1km</text>
+          <image src="/../images/nav.png"></image>
+          <text class="nav">导航</text>
+        </view>
+      </view>
+      <view class="below">
+        <text>定阳路巨燕财富</text>
+      </view>
+    </view>
+    <view class="item">
+      <view class="item_img">
+        <image class="tag_image" src="/../images/item.png"></image>
+      </view>
+      <view class="item_msg">
+        <view class="msg_left">
+          <text>顺通大广汽车</text>
+        </view>
+        <view class="msg_right">
+          <text class="pos">1km</text>
+          <image src="/../images/nav.png"></image>
+          <text class="nav">导航</text>
+        </view>
+      </view>
+      <view class="below">
+        <text>定阳路巨燕财富</text>
+      </view>
+    </view>
+    <view class="item">
+      <view class="item_img">
+        <image class="tag_image" src="/../images/item.png"></image>
+      </view>
+      <view class="item_msg">
+        <view class="msg_left">
+          <text>顺通大广汽车</text>
+        </view>
+        <view class="msg_right">
+          <text class="pos">1km</text>
+          <image src="/../images/nav.png"></image>
+          <text class="nav">导航</text>
+        </view>
+      </view>
+      <view class="below">
+        <text>定阳路巨燕财富</text>
+      </view>
+    </view>
+    <view class="item">
+      <view class="item_img">
+        <image class="tag_image" src="/../images/item.png"></image>
+      </view>
+      <view class="item_msg">
+        <view class="msg_left">
+          <text>顺通大广汽车</text>
+        </view>
+        <view class="msg_right">
+          <text class="pos">1km</text>
+          <image src="/../images/nav.png"></image>
+          <text class="nav">导航</text>
+        </view>
+      </view>
+      <view class="below">
+        <text>定阳路巨燕财富广场A11</text>
+      </view>
+    </view>
+  </view>
 </view>
+<!-- <import src="../../template/template.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/> -->

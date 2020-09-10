@@ -1,4 +1,9 @@
 /**app.wxss**/
+@import './styles/iconfont.wxss';
+@import "/template/template.wxss";
+page{
+  background-color: "#f2f2f2";
+}
 .container {
   height: 100%;
   display: flex;
