@@ -1,0 +1,108 @@
+<!-- 顶部导航wxml -->
+<view class="home">
+  <view class='totle-nav'>
+    <scroll-view class='scroll-wrap' scroll-x="true" style='width:100%;'>
+      <text class="{{flag==index?'active':''}}" bindtap="flagFun" wx:for="{{category}}" wx:key="index" data-flagindex='{{index}}'>{{item.name}}</text>
+    </scroll-view>
+  </view>
+  <!-- 顶部块导航 -->
+  <view class="block">
+      <view class="bloc">全合成</view>
+      <view class="bloc">矿物质</view>
+      <view class="bloc">半合成</view>
+  </view> 
+  <!-- 轮播图 -->
+  <view class='banner_warp'>
+      <swiper class='banner' autoplay='true' circular='true' indicator-dots='true'>
+          <block wx:for='{{banner}}' wx:key='' wx:key='{{index}}'>
+          <swiper-item>
+              <view class='li '>
+              <image src='{{item.img}}' mode='aspectFill'></image>
+              </view>
+          </swiper-item>
+          </block>
+      </swiper>
+  </view>
+  <!-- 更多 -->
+  <view class="hotsale">
+    <view class="hot">热销</view>
+    <view class="more">更多></view>
+  </view>
+  <!-- 滚动块 -->
+  <scroll-view class='wrapper' scroll-x="true">
+    <view class='horizontal-scroll' wx:for="{{dataList}}" wx:key="{{index}}">
+      <image src="{{item.img}}"></image>
+      <view class="hot_discrib">
+        <view>
+           <text>{{item.name}}</text>
+        </view>
+        <view>
+          <text>共125人付款</text>
+          <text>￥120</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 更多 -->
+  <view class="hotsale">
+    <view class="hot">为你推荐</view>
+    <view class="more">更多></view>
+  </view>
+  <!-- 内容 -->
+  <view class="content">
+      <view class="cont">
+          <view class="cont_img">
+            <image class="conti_img" mode='aspectFill' src='/../images/item.png'></image>
+          </view>
+          <view class="cont_siz">
+              <view><text>2000机油</text></view>
+              <view><text>全合成机油 SN 沾度：5w-40</text></view>
+              <view><text>￥165.00</text></view>
+          </view>
+      </view>
+      <view class="cont">
+          <view class="cont_img">
+            <image class="conti_img" src='/../images/goods10.jpg'></image>
+          </view>
+          <view class="cont_siz">
+              <view><text>2000机油</text></view>
+              <view><text>全合成机油 SN 沾度：5w-40</text></view>
+              <view><text>￥165.00</text></view>
+          </view>
+      </view>
+      <view class="cont">
+          <view class="cont_img">
+            <image class="conti_img" src='/../images/goods11.jpg'></image>
+          </view>
+          <view class="cont_siz">
+              <view><text>2000机油</text></view>
+              <view><text>全合成机油 SN 沾度：5w-40</text></view>
+              <view><text>￥165.00</text></view>
+          </view>
+      </view>
+      <view class="cont">
+          <view class="cont_img">
+            <image class="conti_img" src='/../images/goods2.jpg'></image>
+          </view>
+          <view class="cont_siz">
+              <view><text>2000机油</text></view>
+              <view><text>全合成机油 SN 沾度：5w-40</text></view>
+              <view><text>￥165.00</text></view>
+          </view>
+      </view>
+      <view class="cont">
+          <view class="cont_img">
+            <image class="conti_img" src='/../images/goods4.jpg' ></image>
+          </view>
+          <view class="cont_siz">
+              <view><text>2000机油</text></view>
+              <view><text>全合成机油 SN 沾度：5w-40</text></view>
+              <view><text>￥165.00</text></view>
+          </view>
+      </view>
+  </view>
+
+  <!-- <view class='news-wrap' hidden="{{flag == 0?false:true}}">
+    当前flag=0，机油
+  </view> -->
+</view>

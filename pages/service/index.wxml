@@ -1,2 +1,101 @@
 <!--pages/service/index.wxml-->
-<text>pages/service/index.wxml</text>
+<view class="main">
+  <view class="logo">
+    <image src="/../images/repair.png"></image>
+  </view>
+  <view class="content">
+    <view>
+      <view class="title"><text>发动机快修保养:</text></view>
+      <scroll-view class="show" scroll-x="true">
+          <view class="item">
+            <view class="tip">
+              <image src="/../images/1.png"></image>
+            </view>
+            <text>机油三滤的检查与更换</text>
+          </view>
+          <view class="item">
+            <view class="tip">
+              <image src="/../images/2.png"></image>
+            </view>
+            <text>正时皮带的检查与更换</text>
+          </view>
+          <view class="item">
+            <view class="tip">
+              <image src="/../images/3.png"></image>
+            </view>
+            <text>火花塞的检查与更换</text>
+          </view>
+          <view class="item">
+            <view class="tip">
+              <image src="/../images/4.png"></image>
+            </view>
+            <text>防冻液的检查与更换</text>
+          </view>
+      </scroll-view>
+      <view class="title"><text>轮胎修复:</text></view>
+      <scroll-view class="show" scroll-x="true">
+          <view class="item">
+            <view class="tip">
+              <image src="/../images/4.png"></image>
+            </view>
+            <text>轮胎专业知识</text>
+          </view>
+          <view class="item">
+            <view class="tip">
+              <image src="/../images/5.png"></image>
+            </view>
+            <text>机械扒胎</text>
+          </view>
+          <view class="item">
+            <view class="tip">
+              <image src="/../images/6.png"></image>
+            </view>
+            <text>动平衡</text>
+          </view>
+          <view class="item">
+            <view class="tip">
+              <image src="/../images/7.png"></image>
+            </view>
+            <text>轮胎修补</text>
+          </view>
+      </scroll-view>
+      <view class="title"><text>底盘快修保养:</text></view>
+      <scroll-view class="show" scroll-x="true">
+          <view class="item">
+            <view class="tip">
+              <image src="/../images/9.png"></image>
+            </view>
+            <text>球笼的检查与更换</text>
+          </view>
+          <view class="item">
+            <view class="tip">
+              <image src="/../images/8.png"></image>
+            </view>
+            <text>离合器油的检查与更换</text>
+          </view>
+          <view class="item">
+            <view class="tip">
+              <image src="/../images/7.png"></image>
+            </view>
+            <text>制动液的检查与更换</text>
+          </view>
+          <view class="item">
+            <view class="tip">
+              <image src="/../images/6.png"></image>
+            </view>
+            <text>手动变速器的检查与更换</text>
+          </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="tag">
+    <view class="merchant"><image src="/../images/merchant1.jpg"></image></view>
+    <view class="merchant"><image src="/../images/merchant2.jpg"></image></view>
+    <view class="merchant"><image src="/../images/merchant3.jpg"></image></view>
+    <view class="merchant"><image src="/../images/merchant4.jpg"></image></view>
+    <view class="merchant"><image src="/../images/merchant5.jpg"></image></view>
+    <view class="merchant"><image src="/../images/merchant6.jpg"></image></view>
+    <view class="merchant"><image src="/../images/merchant7.jpg"></image></view>
+    <view class="merchant"><image src="/../images/merchant8.jpg"></image></view>
+  </view>
+</view>

@@ -2,7 +2,10 @@
   "pages":[
     "pages/index/index",
     "pages/service/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/market/market",
+    "pages/spar/index",
+    "pages/vip/index"
   ],
   "window":{
     "backgroundColor":"#f2f2f2",
@@ -27,7 +30,7 @@
         "width":"200rpx",
         "selectedIconPath": "images/b_service.png",
         "iconPath": "images/service.png",
-        "pagePath": "pages/service/index",
+        "pagePath": "pages/market/market",
         "text": "汽车服务"
       },
       {

@@ -17,7 +17,7 @@
       </view>
     </view>
     <view class="line_one"></view>
-    <view class="cate_two">
+    <view class="cate_two" bindtap="handleClick">
       <view class="tag">
         <view class="tag_items" wx:for = "{{types}}">
           <image class="tag_image" src="{{item.logoimage}}"></image>
@@ -46,7 +46,7 @@
   <view class="list">
     <view class="item">
       <view class="item_img">
-        <image class="tag_image" src="/../images/item.png"></image>
+        <image src="/../images/item.png"></image>
       </view>
       <view class="item_msg">
         <view class="msg_left">
@@ -64,7 +64,7 @@
     </view>
     <view class="item">
       <view class="item_img">
-        <image class="tag_image" src="/../images/item.png"></image>
+        <image src="/../images/item.png"></image>
       </view>
       <view class="item_msg">
         <view class="msg_left">
@@ -82,7 +82,7 @@
     </view>
     <view class="item">
       <view class="item_img">
-        <image class="tag_image" src="/../images/item.png"></image>
+        <image src="/../images/item.png"></image>
       </view>
       <view class="item_msg">
         <view class="msg_left">
@@ -100,7 +100,7 @@
     </view>
     <view class="item">
       <view class="item_img">
-        <image class="tag_image" src="/../images/item.png"></image>
+        <image src="/../images/item.png"></image>
       </view>
       <view class="item_msg">
         <view class="msg_left">
@@ -118,7 +118,7 @@
     </view>
     <view class="item">
       <view class="item_img">
-        <image class="tag_image" src="/../images/item.png"></image>
+        <image src="/../images/item.png"></image>
       </view>
       <view class="item_msg">
         <view class="msg_left">
@@ -136,7 +136,7 @@
     </view>
     <view class="item">
       <view class="item_img">
-        <image class="tag_image" src="/../images/item.png"></image>
+        <image src="/../images/item.png"></image>
       </view>
       <view class="item_msg">
         <view class="msg_left">

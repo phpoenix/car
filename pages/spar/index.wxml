@@ -1,0 +1,35 @@
+<!--pages/spar/index.wxml-->
+<view class="car_all">
+	<view class="car_img">
+		<image src="/images/spar1.png"></image>
+	</view>
+	<view class="car_fle">
+		<view class="car_biao">
+			<image src="/images/spar2.png"></image>
+		</view>
+          <view class="car_xian"></view>
+          <view class="car_text">
+              <text>专业的设备、专业的技术，专业的人员，车辆美容，请联系我们，我们只注重品质！</text>
+          </view>
+    </view>
+     <view class="car_flex">
+          <view><text>浅层划痕</text></view>
+          <view><text>深层划痕</text></view>
+          <view><text>抛光</text></view>
+          <view><text>封釉</text></view>
+          <view><text>镀膜</text></view>
+          <view><text>镀金</text></view>
+          <view><text>金盾</text></view>
+          <view><text>底盘装甲（隔音防锈）</text></view>
+          <view><text>镀膜</text></view>
+          <view><text>发动机表面翻新</text></view>
+          <view><text>新车打蜡</text></view>
+          <view><text>车内甲醛净化</text></view>
+          <view class="car_scr">
+               <view></view>
+               <view></view>
+               <view></view>
+          </view>
+     </view>
+</view>
+

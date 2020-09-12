@@ -1,0 +1,64 @@
+<!--pages/vip/index.wxml-->
+<view class="main">
+  <view class="banner">
+    <image src="/images/banner.png"></image>
+  </view>
+  <view class="content">
+    <view class="item">
+      <view class="tag">
+        <view class="up">
+          <image src="/images/vip1.png"></image>
+          <text>保险到期提醒</text>
+        </view>
+        <view class="down">
+          <text>80%用户关注</text>
+        </view>
+      </view>
+      <view class="pic">
+        <image src="/images/vip2.png"></image>
+      </view>
+    </view>
+    <view class="item">
+      <view class="tag">
+        <view class="up">
+          <image src="/images/vip1.png"></image>
+          <text>审车提醒</text>
+        </view>
+        <view class="down">
+          <text>80%用户关注</text>
+        </view>
+      </view>
+      <view class="pic">
+        <image src="/images/vip2.png"></image>
+      </view>
+    </view>
+    <view class="item">
+      <view class="tag">
+        <view class="up">
+          <image src="/images/vip1.png"></image>
+          <text>违章告知</text>
+        </view>
+        <view class="down">
+          <text>80%用户关注</text>
+        </view>
+      </view>
+      <view class="pic">
+        <image src="/images/vip2.png"></image>
+      </view>
+    </view>
+    <view class="item">
+      <view class="tag">
+        <view class="up">
+          <image src="/images/vip1.png"></image>
+          <text>驾照到期更换提醒</text>
+        </view>
+        <view class="down">
+          <text>80%用户关注</text>
+        </view>
+      </view>
+      <view class="pic">
+        <image src="/images/vip2.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

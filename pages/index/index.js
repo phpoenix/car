@@ -35,6 +35,15 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  handleClick: function(e){
+    /*wx.navigateTo 未在app.json里注册的
+      wx.switchTab  在app.json里面注册的
+     */
+    var index = 1;
+    wx.navigateTo({
+      url:'/pages/spar/index?index='+1,
+    })
   }
 })
 
