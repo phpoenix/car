@@ -211,6 +211,9 @@
 }
 
 .msg_left{
+  width: 180rpx;
+  overflow: hidden;
+  white-space: nowrap;
   font-weight: bold;
   font-size: 13px;
 }
@@ -236,6 +239,8 @@
 }
 .below{
   width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
   font-size: 11px;
   margin: 30rpx 20rpx 10rpx 20rpx;/*上右下左*/
 }

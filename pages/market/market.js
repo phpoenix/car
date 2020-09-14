@@ -47,6 +47,16 @@ Page({
         });
       },
     onLoad: function (options) {
-      
+      var that = this;
+      wx.request({
+        url: 'http://cc.cc/index/index/market',
+        success(e) {
+          that.setData({
+            goods: e.data.result.goods,
+            hot: e.data.result.hot
+          })
+          console.log(that.data.goods);
+        }
+      })
     },
   })

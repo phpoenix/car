@@ -104,6 +104,9 @@
 .horizontal-scroll .hot_discrib>view:nth-child(1){
   font-size: 12px;
   padding-bottom:0;
+  width: 300rpx;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .horizontal-scroll .hot_discrib>view:nth-child(2){
   display: flex;
@@ -159,4 +162,21 @@
 .cont_siz text{
   font-size: 12px;
   margin: 30rpx 20rpx 10rpx 20rpx;/*上右下左*/
+}
+
+.cont_siz :nth-child(1){
+  width: 300rpx;
+  overflow: hidden;
+}
+
+.cont_siz :nth-child(2){
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cont_siz :last-child{
+  width: 200rpx;
+  overflow: hidden;
+  white-space: nowrap;
 }

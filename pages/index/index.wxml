@@ -44,13 +44,13 @@
     </view>
   </view>
   <view class="list">
-    <view class="item">
+    <view class="item" wx:for = "{{merchant}}">
       <view class="item_img">
-        <image src="/../images/item.png"></image>
+        <image src="{{item.banner}}"></image>
       </view>
       <view class="item_msg">
         <view class="msg_left">
-          <text>顺通大广汽车</text>
+          <text>{{item.name}}</text>
         </view>
         <view class="msg_right">
           <text class="pos">1km</text>
@@ -59,99 +59,9 @@
         </view>
       </view>
       <view class="below">
-        <text>定阳路巨燕财富</text>
+        <text>{{item.address}}</text>
       </view>
-    </view>
-    <view class="item">
-      <view class="item_img">
-        <image src="/../images/item.png"></image>
-      </view>
-      <view class="item_msg">
-        <view class="msg_left">
-          <text>顺通大广汽车</text>
-        </view>
-        <view class="msg_right">
-          <text class="pos">1km</text>
-          <image src="/../images/nav.png"></image>
-          <text class="nav">导航</text>
-        </view>
-      </view>
-      <view class="below">
-        <text>定阳路巨燕财富</text>
-      </view>
-    </view>
-    <view class="item">
-      <view class="item_img">
-        <image src="/../images/item.png"></image>
-      </view>
-      <view class="item_msg">
-        <view class="msg_left">
-          <text>顺通大广汽车</text>
-        </view>
-        <view class="msg_right">
-          <text class="pos">1km</text>
-          <image src="/../images/nav.png"></image>
-          <text class="nav">导航</text>
-        </view>
-      </view>
-      <view class="below">
-        <text>定阳路巨燕财富</text>
-      </view>
-    </view>
-    <view class="item">
-      <view class="item_img">
-        <image src="/../images/item.png"></image>
-      </view>
-      <view class="item_msg">
-        <view class="msg_left">
-          <text>顺通大广汽车</text>
-        </view>
-        <view class="msg_right">
-          <text class="pos">1km</text>
-          <image src="/../images/nav.png"></image>
-          <text class="nav">导航</text>
-        </view>
-      </view>
-      <view class="below">
-        <text>定阳路巨燕财富</text>
-      </view>
-    </view>
-    <view class="item">
-      <view class="item_img">
-        <image src="/../images/item.png"></image>
-      </view>
-      <view class="item_msg">
-        <view class="msg_left">
-          <text>顺通大广汽车</text>
-        </view>
-        <view class="msg_right">
-          <text class="pos">1km</text>
-          <image src="/../images/nav.png"></image>
-          <text class="nav">导航</text>
-        </view>
-      </view>
-      <view class="below">
-        <text>定阳路巨燕财富</text>
-      </view>
-    </view>
-    <view class="item">
-      <view class="item_img">
-        <image src="/../images/item.png"></image>
-      </view>
-      <view class="item_msg">
-        <view class="msg_left">
-          <text>顺通大广汽车</text>
-        </view>
-        <view class="msg_right">
-          <text class="pos">1km</text>
-          <image src="/../images/nav.png"></image>
-          <text class="nav">导航</text>
-        </view>
-      </view>
-      <view class="below">
-        <text>定阳路巨燕财富广场A11</text>
-      </view>
-    </view>
+    </view> 
   </view>
 </view>
 <!-- <import src="../../template/template.wxml"/>

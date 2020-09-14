@@ -22,9 +22,10 @@ Page({
       success (e){
         that.setData({
           types : e.data.result.types,
-          banner : e.data.result.banner
+          banner : e.data.result.banner,
+          merchant : e.data.result.merchant
         })
-        console.log(that.data.banner);
+        console.log(that.data.merchant);
       }
     })
   },

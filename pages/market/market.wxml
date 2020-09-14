@@ -30,15 +30,15 @@
   </view>
   <!-- 滚动块 -->
   <scroll-view class='wrapper' scroll-x="true">
-    <view class='horizontal-scroll' wx:for="{{dataList}}" wx:key="{{index}}">
-      <image src="{{item.img}}"></image>
+    <view class='horizontal-scroll' wx:for="{{goods}}">
+      <image src="{{item.bannerimage}}"></image>
       <view class="hot_discrib">
         <view>
            <text>{{item.name}}</text>
         </view>
         <view>
           <text>共125人付款</text>
-          <text>￥120</text>
+          <text>￥{{item.price}}</text>
         </view>
       </view>
     </view>
@@ -50,54 +50,14 @@
   </view>
   <!-- 内容 -->
   <view class="content">
-      <view class="cont">
+      <view class="cont" wx:for="{{hot}}">
           <view class="cont_img">
-            <image class="conti_img" mode='aspectFill' src='/../images/item.png'></image>
+            <image class="conti_img" src='{{item.bannerimage}}'></image>
           </view>
           <view class="cont_siz">
-              <view><text>2000机油</text></view>
+              <view><text>{{item.name}}</text></view>
               <view><text>全合成机油 SN 沾度：5w-40</text></view>
-              <view><text>￥165.00</text></view>
-          </view>
-      </view>
-      <view class="cont">
-          <view class="cont_img">
-            <image class="conti_img" src='/../images/goods10.jpg'></image>
-          </view>
-          <view class="cont_siz">
-              <view><text>2000机油</text></view>
-              <view><text>全合成机油 SN 沾度：5w-40</text></view>
-              <view><text>￥165.00</text></view>
-          </view>
-      </view>
-      <view class="cont">
-          <view class="cont_img">
-            <image class="conti_img" src='/../images/goods11.jpg'></image>
-          </view>
-          <view class="cont_siz">
-              <view><text>2000机油</text></view>
-              <view><text>全合成机油 SN 沾度：5w-40</text></view>
-              <view><text>￥165.00</text></view>
-          </view>
-      </view>
-      <view class="cont">
-          <view class="cont_img">
-            <image class="conti_img" src='/../images/goods2.jpg'></image>
-          </view>
-          <view class="cont_siz">
-              <view><text>2000机油</text></view>
-              <view><text>全合成机油 SN 沾度：5w-40</text></view>
-              <view><text>￥165.00</text></view>
-          </view>
-      </view>
-      <view class="cont">
-          <view class="cont_img">
-            <image class="conti_img" src='/../images/goods4.jpg' ></image>
-          </view>
-          <view class="cont_siz">
-              <view><text>2000机油</text></view>
-              <view><text>全合成机油 SN 沾度：5w-40</text></view>
-              <view><text>￥165.00</text></view>
+              <view><text>￥{{item.price}}</text></view>
           </view>
       </view>
   </view>
