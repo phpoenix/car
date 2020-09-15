@@ -1,0 +1,70 @@
+<!--pages/proxy/index.wxml-->
+<view class="tab">
+    <view class="tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全程代办</view>
+    <view class="tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">自驾前往</view>
+</view>
+ 
+<swiper current="{{currentTab}}" class="box" duration="300" style="height:{{currentTab==0 ? '200' : '150'}}px" bindchange="bindChange">
+    <!-- 我是哈哈 -->
+    <swiper-item>
+      <view class="input">
+        <view class="enter"><text>接车位置</text></view>
+        <input class="one"></input>
+        <view class="pic_one"><image src="/../images/map.png"></image></view>
+      </view>
+      <view class="input">
+        <view class="enter"><text>预约时间</text></view>
+        <input class="another" placeholder="请选择预约日期" placeholder-style='text-align: right;'></input>
+        <view class="pic"><image src="/../images/arrow_right.png"></image></view>
+      </view>
+      <view class="input">
+        <view class="enter"><text>预留电话</text></view>
+        <input class="another" placeholder="请输入您的电话" type="number"  placeholder-style='text-align:right'></input>
+        <view class="pic"><image src="/../images/arrow_right.png"></image></view>
+      </view>
+    </swiper-item>
+    <!-- 我是呵呵 -->
+    <swiper-item>
+      <view class="input">
+        <view class="enter"><text>预留电话</text></view>
+        <input class="another" placeholder="请输入您的电话" type="number"  placeholder-style='text-align:right'></input>
+        <view class="pic"><image src="/../images/arrow_right.png"></image></view>
+      </view>
+      <view class="notice">
+        <view><image src="/../images/notice.png"></image></view>
+        <text>等待通知审车时间</text>
+      </view>
+    </swiper-item>
+</swiper>
+<view class="msg_btn">
+      <button>立即预约</button>
+</view>
+<view class="declare">
+  <view class="title">
+    <text>审车携带资料</text>
+  </view>
+  <view class="content">
+    <text>
+      一、审车所需手续
+
+        1、行驶证原件
+        2、有效的交强险副本原件（含车船税）
+        3、车主身份证原件
+        4、如果你的车工是单位还需要带上公章哦
+
+        
+      二、审车流程：
+
+        1、进行车辆唯一性确认。
+        2、对尾气、车速、制动、灯光、侧滑、地沟等工位
+           进行检测，并对检测部位进行自动拍照。
+        3、核发环保标志。
+        4、机动车安全技术检测报告单，拍照上传照片。
+        5、保险审核。
+        6、缴费。
+        7、打印审验合格证。
+      
+      顺通监测站咨询电话：0354 - 3111111
+    </text>
+  </view>
+</view>

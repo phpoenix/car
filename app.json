@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/proxy/index",
     "pages/index/index",
     "pages/service/index",
     "pages/logs/logs",

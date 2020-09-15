@@ -1,0 +1,154 @@
+/* pages/proxy/index.wxss */
+
+.tab{
+	width: 100%;
+	text-align: center;
+	line-height: 80rpx;
+  display: flex;
+  box-shadow: 0 2px 3px -1px #e5e5e5;
+}
+
+.tab-list{  
+  font-size: 30rpx;
+  float: left;
+	width: 25%;
+}
+
+.on{ 
+  color: #da7c0c;
+  border-bottom: 2px solid #da7c0c;
+}
+ 
+.box{ 
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: 94%;
+  overflow: hidden; 
+}
+
+.box view{
+	text-align: center;
+}
+
+.declare{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 28rpx;
+  margin-bottom: 80rpx;
+}
+
+.declare .title{
+  font-weight: bolder;
+  position: relative;
+}
+
+.declare .title::before,.declare .title::after{
+  content: ''; 
+  position: absolute;
+  background: #f1f1f1;
+  width: 100%;
+  height: 1px;
+  top: 50%;
+}
+
+.declare .title::before{
+  left: -110%;
+}
+
+.declare .title::after{
+  right: -110%;
+}
+
+.input{
+  font-size: 28rpx;
+  /* margin-right: 40rpx; */
+  display: flex;
+  width: 100%;
+  /* align-items: center; */
+  padding: 30rpx 0 10rpx 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.notice{
+  font-size: 28rpx;
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+  margin: 40rpx 50rpx 0 0;
+  width: 100%;
+  /* align-items: center; */
+  padding-top: 30rpx;
+}
+
+.notice image{
+  width: 20px;
+  height: 20px;
+}
+
+.notice text{
+  margin-left: 10rpx;
+  color:#c2c2c2 
+}
+
+.input .one{
+  width: 65%;
+}
+
+.input .another{
+  width: 480rpx;
+}
+
+.input .enter{
+  width: 20%;
+  padding-left: 20rpx;
+}
+
+.input .pic{
+  /* float: right; */
+  width: 15px;
+  height: 10px;
+  margin: 0 20rpx 0 20rpx;
+  display:inline-block;
+}
+
+.input .pic_one{
+  width: 25px;
+  height: 25px;
+  margin: 0 0 0 20rpx;
+}
+
+.input view>image{
+  width: 100%;
+  height: 100%;
+}
+
+.msg_btn{
+  margin-bottom: 47px;
+}
+
+.msg_btn button{
+  width: 80%;
+  height: 70rpx;
+  color: white;
+  font-size: 28rpx;
+  font-weight: bold;
+  line-height: 70rpx;
+  background-color: #f7bb4b;
+  border-radius: 98rpx;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    direction: rtl;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    direction: rtl;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ but I'm not sure about working */
+    direction: rtl;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    direction: rtl;
+}
+
