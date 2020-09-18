@@ -1,12 +1,12 @@
 {
   "pages":[
-    "pages/proxy/index",
     "pages/index/index",
     "pages/service/index",
     "pages/logs/logs",
     "pages/market/market",
     "pages/spar/index",
-    "pages/vip/index"
+    "pages/vip/index",
+    "pages/proxy/index"
   ],
   "window":{
     "backgroundColor":"#f2f2f2",
@@ -28,7 +28,6 @@
         "text": "首页"
       },
       {
-        "width":"200rpx",
         "selectedIconPath": "images/b_service.png",
         "iconPath": "images/service.png",
         "pagePath": "pages/market/market",
@@ -41,6 +40,11 @@
         "text": "我的"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

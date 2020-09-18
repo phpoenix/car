@@ -17,12 +17,10 @@
       </view>
     </view>
     <view class="line_one"></view>
-    <view class="cate_two" bindtap="handleClick">
-      <view class="tag">
-        <view class="tag_items" wx:for = "{{types}}">
-          <image class="tag_image" src="{{item.logoimage}}"></image>
-          <text>{{item.name}}</text>
-        </view>
+    <view class="cate_two">
+      <view class="tag" wx:for = "{{tags}}" wx:for-index='key'  bindtap="handleClick" id="{{key}}">
+        <image src="{{item.image}}"></image>
+        <text>{{item.name}}</text>
       </view>
     </view>
     <view class="cate_three">
@@ -54,7 +52,7 @@
         </view>
         <view class="msg_right">
           <text class="pos">1km</text>
-          <image src="/../images/nav.png"></image>
+          <image src="/images/nav.png"></image>
           <text class="nav">导航</text>
         </view>
       </view>

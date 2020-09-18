@@ -22,9 +22,8 @@
 .box{ 
   display: block;
   margin: 0 auto;
-  height: 100%;
   width: 94%;
-  overflow: hidden; 
+  /* overflow: hidden;  */
 }
 
 .box view{
@@ -71,6 +70,10 @@
   border-bottom: 1px solid #ccc;
 }
 
+.map{
+  width: 100%;
+}
+
 .notice{
   font-size: 28rpx;
   float: right;
@@ -93,6 +96,9 @@
 }
 
 .input .one{
+  display: flex;
+  text-align: center;
+  justify-content: center;
   width: 65%;
 }
 
