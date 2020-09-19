@@ -26,15 +26,22 @@
       </view>
       <view class="input">
         <view class="enter"><text>预留电话</text></view>
-        <input name="phone" class="another" placeholder="请输入您的电话" type="number"  placeholder-style='text-align:right' bindinput="eventInput"></input>
+        <input name="phone" class="another" placeholder="请输入您的电话" type="number" value="{{phone}}"  placeholder-style='text-align:right' bindinput="eventInput"></input>
         <view class="pic"><image src="/images/arrow_right.png"></image></view>
       </view>
     </swiper-item>
     <!-- 我是呵呵 -->
     <swiper-item>
       <view class="input">
+        <view class="enter"><text>预约时间</text></view>
+        <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+        <input name="datetime" value="{{date}}" class="another" placeholder="请选择预约日期" placeholder-style='text-align: right;' disabled="true"></input>
+        </picker>
+        <view class="pic"><image src="/images/arrow_right.png"></image></view>
+      </view>
+      <view class="input">
         <view class="enter"><text>预留电话</text></view>
-        <input name="mobile" class="another" placeholder="请输入您的电话" type="number"  placeholder-style='text-align:right' bindinput="eventInput"></input>
+        <input name="mobile" class="another" placeholder="请输入您的电话" type="number" value="{{phone}}"  placeholder-style='text-align:right' bindinput="eventInput"></input>
         <view class="pic"><image src="/images/arrow_right.png"></image></view>
       </view>
       <view class="notice">
@@ -44,7 +51,7 @@
     </swiper-item>
 </swiper>
 <view class="msg_btn">
-      <button formType="submit">立即预约</button>
+      <button formType="submit" style="background: {{background}}">立即预约</button>
 </view>
 <view class="declare">
   <view class="title">

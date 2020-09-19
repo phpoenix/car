@@ -141,7 +141,7 @@
   font-size: 28rpx;
   font-weight: bold;
   line-height: 70rpx;
-  background-color: #f7bb4b;
+  background-color: #bbbab8;
   border-radius: 98rpx;
 }
 

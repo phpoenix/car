@@ -25,7 +25,11 @@ Page({
     province: '',
     city: '',
     district: '',
-    street: ''
+    street: '',
+    date: '',
+    phone: '',
+    background: '#bbbab8',
+    disabled: false
   },
   
   /**
@@ -38,11 +42,9 @@ Page({
       wx.getLocation({
         type: 'gcj02', // 默认为 wgs84 返回 gps 坐标，gcj02 返回可用于 wx.openLocation 的坐标
         success: function (item) {
-          console.log(item);
           qqmapsdk.reverseGeocoder({
             location: item.latitude +","+ item.longitude,
             success: function(res) {
-                console.log(res)
                 that.setData({
                     address: res.result.address,
                     markers: [{
@@ -50,17 +52,7 @@ Page({
                       latitude: item.latitude,
                       longitude: item.longitude,
                       title: res.result.address,
-                      iconPath: "/images/pos.png"
-                      // label: {
-                      //   content: '标记',
-                      //   color: '#22ac38',
-                      //   fontSize: 14,
-                      //   bgColor: "#fff",
-                      //   borderRadius: 30,
-                      //   borderColor: "#22ac38",
-                      //   borderWidth: 1,
-                      //   padding: 3
-                      // }, 
+                      iconPath: "/images/pos.png" 
                     }]
                 })
             },
@@ -68,14 +60,20 @@ Page({
                  console.log(res);
             },
             complete: function(res) {
-                 console.log(res);
+                 
             }
-        });
+          });
+          if(that.checkForm()){
+            that.setData({
+              background: '#f7bb4b',
+              disabled: true
+            });
+          }
           //赋值经纬度
           that.setData({
             latitude: item.latitude,
             longitude: item.longitude,
-          })
+          });
         }
       });
       
@@ -100,24 +98,33 @@ Page({
    * 日期组件
    */
   bindDateChange:function(e){
-    this.setData({
+    var that = this;
+    that.setData({
       date:e.detail.value,
     });
+    if(that.checkForm()){
+      that.setData({
+       background: '#f7bb4b',
+       disabled: true
+      });
+    }
   },
 
   eventInput: function(e){
-    //移动手机号
-    var reg1 = /^1(3[4-9]|5[012789]|8[78])\d{8}$/;
-    //电信手机号
-    var reg2 = /^18[09]\d{8}$/;
-    //联通手机号
-    var reg3 = /^1(3[0-2]|5[56]|8[56])\d{8}$/;
-    //CDMA手机号
-    var reg4 = /^1[35]3\d{8}$/;
-
-    var reg = /^((13[0-9])|(14[0-9])|(15[0-9])|(17[0-9])|(18[0-9]))\d{8}$/;
-    if (reg.test(e.detail.value)){
+    //前台不必要验证手机号正确与否
+    var that = this;
+    // var reg = /^((13[0-9])|(14[0-9])|(15[0-9])|(17[0-9])|(18[0-9]))\d{8}$/;
+    if ((e.detail.value).length == 11){
+      that.setData({
+        phone: e.detail.value
+      });
       wx.hideKeyboard();
+      if(that.checkForm()){
+        that.setData({
+         background: '#f7bb4b',
+         disabled: true
+        });
+      }
     }
   },
 
@@ -125,23 +132,40 @@ Page({
    * form表单提交
    */
   formSubmit: function(e){
-    var position,date,phone;
-    position = e.detail.value.position;
-    date = e.detail.value.date;
-    phone = e.detail.value.phone;
-    console.log(position)
+    if(this.data.disabled == false)
+      return false;
+    var data = {}, that = this;
+    //向接口提交的数据data
+    data = {
+      type: that.data.currentTab + 1,
+      address: that.data.address,
+      latitude: that.data.latitude,
+      longitude: that.data.longitude,
+      date: that.data.date,
+      phone: that.data.phone
+    };
     wx.request({
       url: "https://super.mynatapp.cc/index/proxy/collect",
       method: "POST",
-      data: {
-        position:position,
-        date: date,
-        phone: phone
-      },
+      data: data,
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
       success: function (res) {
+        
+        //阻止重复提交
+        that.setData({
+          disabled: false
+        });
+
+        if(res.data.code == 400){
+          wx.showToast({
+            title: res.data.result.error,
+            icon: 'none',
+            duration: 1000,
+            mask:true
+          })
+        };
         console.log(res.data);
       }
     });
@@ -234,12 +258,20 @@ Page({
      * 滑动切换tab
      */
   bindChange: function (e) {
-    console.log(e.detail.current)
+    // console.log(e.detail.current)
     var that = this;
     that.setData({
       currentTab: e.detail.current,
-      height: e.detail.current == 0? 220 : 150,
-      display_map: 'none'
+      height: e.detail.current == 0? 220 : 200,
+      display_map: 'none',
+      //切换后置空input框的值
+      address: '',
+      latitude: '',
+      longitude: '',
+      date: '',
+      phone: '',
+      background: '#bbbab8',
+      disabled: false
     });
 
   },
@@ -257,5 +289,24 @@ Page({
         display_map: 'none'
       })
     }
+  },
+
+  /**
+   * 验证表单是否填写完整
+   */
+  checkForm: function(){
+    var option;
+    if(this.data.currentTab==0){
+      option = [this.data.address,this.data.date,this.data.phone];
+    }else{
+      option = [this.data.date,this.data.phone];
+    }console.log(option)
+    for(var item in option){
+      if(option[item] == "" || option[item] == null || option[item] == "undefined"){
+        return false;
+      }
+    }
+    return true;
   }
+  
 })
